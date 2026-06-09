@@ -4,8 +4,8 @@ class changing6to9 {
         int temp = num;
         int position = 0;
         int changePos = -1;
-//sbse phle temp mae store kar hae
-
+        //sbse phle temp mae store kar hae
+        //storing position of the value
         while (temp > 0) {
             if (temp % 10 == 6) {
                 changePos = position;
@@ -13,10 +13,12 @@ class changing6to9 {
             temp /= 10;
             position++;
         }
-
         if (changePos != -1) {
             num += 3 * (int)Math.pow(10, changePos);
         }
         return num;
+    }
+    public static void main(String[] args) {
+        
     }
 }
