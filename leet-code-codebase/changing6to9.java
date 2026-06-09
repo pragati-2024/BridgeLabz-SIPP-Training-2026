@@ -1,10 +1,22 @@
-import java.util.*;
-public class changing6to9{
-    public static void main(String[] args) {
-        //input = 9996
-        //output = 9999
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+class changing6to9 {
+    public int maximum69Number(int num) {
 
+        int temp = num;
+        int position = 0;
+        int changePos = -1;
+//sbse phle temp mae store kar hae
+
+        while (temp > 0) {
+            if (temp % 10 == 6) {
+                changePos = position;
+            }
+            temp /= 10;
+            position++;
+        }
+
+        if (changePos != -1) {
+            num += 3 * (int)Math.pow(10, changePos);
+        }
+        return num;
     }
 }
