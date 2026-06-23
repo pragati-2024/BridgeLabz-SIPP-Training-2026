@@ -21,7 +21,8 @@ class Test{
     }
     void m1(Monkey obj){
         System.out.println("m1 monkey");
-        //method jhaving same name but diffrencet argument->overloading
+        //method jhaving same name but diffrencet argument->overriding//overloading mae return type dosent matter
+        
     }
 }
 public class inheritanceLearning {
