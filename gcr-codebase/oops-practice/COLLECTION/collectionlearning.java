@@ -11,9 +11,21 @@ public class collectionlearning {
         this.name=name;
     }
    public static void main(String[] args) {
-     ArrayList<Integer> ay = new ArrayList<>();
+     ArrayList<Integer> list = new ArrayList<>();
        collectionlearning s1 = new collectionlearning(1, "Pragati");
-       
+        collectionlearning s2 = new collectionlearning(2, "Rahul");
+        collectionlearning s3 = new collectionlearning(3, "Aman");
+
+        // Adding objects
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
+
+        // Printing objects
+        for (collectionlearning s : list) {
+            System.out.println(s.id + " " + s.name);
+        }
+
 
    }
     // The Java Collection Framework (JCF) is a set of interfaces and classes used

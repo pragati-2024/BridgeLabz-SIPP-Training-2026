@@ -16,7 +16,6 @@ class dog extends Animal {
     String bread;
 
     dog(String name, String bread) {
-        //constructor call kra phle 
         super(name);
         this.bread = bread;
 
@@ -28,11 +27,11 @@ class dog extends Animal {
 
     void showdetails() {
         display();
-        System.out.println("details"+bread);
+        System.out.println("details");
     }
 }
 
-class interfaceextendlearning {
+public class interfaceextendlearning {
     public static void main(String[] args) {
         dog d1 = new dog("cherry", "labrador");
         d1.showdetails();
