@@ -27,6 +27,7 @@ class objectMaking {
         objC.m1();
     }
 
+
     @Override
     public int hashCode() {
         final int prime = 31;
