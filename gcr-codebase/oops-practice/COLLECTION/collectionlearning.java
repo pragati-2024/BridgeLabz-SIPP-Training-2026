@@ -11,15 +11,15 @@ public class collectionlearning {
         this.name=name;
     }
    public static void main(String[] args) {
-     ArrayList<Integer> list = new ArrayList<>();
+     ArrayList<collectionlearning> list = new ArrayList<>();
        collectionlearning s1 = new collectionlearning(1, "Pragati");
         collectionlearning s2 = new collectionlearning(2, "Rahul");
         collectionlearning s3 = new collectionlearning(3, "Aman");
 
         // Adding objects
         list.add(s1);
-        list.add(s2);
-        list.add(s3);
+        // list.add(s2);
+        // list.add(s3);
 
         // Printing objects
         for (collectionlearning s : list) {
@@ -49,10 +49,11 @@ public class collectionlearning {
     // int x = num; // Auto-unboxing
 
 
-    // utility method-> dont need to write core logic these are just static method
+    // utility method-> dont need to write core logic these are just static() method class se call krskte ho
     // Collections.sort()->utility
     // diffrence
     // Collections(utility class that contain utility method such as static method , static method depend upon class)
+    // kyu class k name se call krte hae?-> static kyu? static block kya kaam krta h
     //  and Collection-> its an interface,used to store and manage group of objects->list,set, queue
 
     // interface to interface-extend
@@ -66,11 +67,38 @@ public class collectionlearning {
 // ),LinkedList(Class)(not indexes)(prefer for insertion and deletion),Vector(Class),Stack(Class)(last two are legacy classes we dont use it)
 // ->idhr hoga implementation
 
-    // queue(Interface)->
+    // queue(Interface)->priorityQueue(class),
+    // dequeue(Interface)->suppoert double ended queue-linkedlist k sath implemet hotahae
+    // ArrayDeque(Class)->
 
 
     // set(Interface)(unique element,dont allow duplicate,order doesnt matter) - > NavigableSet(Interface),
     // SortedSet(Interface),HashSet(class),LinkHashSet(class)(unique data store krta hae order kae according)(order f insertion)
     // ,TreeSet(class)(sorted with unique)
     // HW -> READ ARRAYLIST,LINEKD LIST AND THEIR DIFFERENCE 
+// hashset->linkehashset->treeset
+//    sortedset I-nvigableset I->treeset c
+
+    // jab class load even befor object creation during class loading class allocate to static me
+    // **************************************************************************//
+
+
+    // null kisme accept nai hoti hae - >TREESET
+    // NULL KISME ACCEPT HOTI HAE - > HASHSET MAE HOTI HAE 1 HOTI HAE
+    // aur konse collection mae acept hoti hae
+    // 
+
+
+    // LIST KO ITERATE KRNE KAE LIYE CURSOR USE HOTA HAE
+    // COLLECTION MAE OBJECT HI STORE HOTA HAE
+    // ***********************************************************************************
+    // CURSOR(OBJECT)-> ENUMERATOR(INTERFACE) ->ITERATOR**(INTERFACE)** -->(ITERATE KRNE KAE LIYE)-->
+
+
+    // METHOD - > hasNet,HasNext->collection mae element hae ya nai usi kae according iterate krne kae liey
+    // list.iterator->return kis referncer m krega->iterator kae mae
+    // LIST ITERATOR (INTERFACE)
+    //SET,UPDATE,REMOVE
+        //   CURSOR-ENUMERATOR(INTERFACE)(LEGACY CLASS->VECTOR,STACk),ITERATOR(UNIVERSAL IERATOR->sare collection),
+        // LIST ITERATOR->SIRF LIST KAE UPR HI KAAM KREGA
 }
