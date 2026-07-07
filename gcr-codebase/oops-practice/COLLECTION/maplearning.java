@@ -1,6 +1,17 @@
 package COLLECTION;
 
+import java.util.ArrayList;
+
 public class maplearning {
+    // generics
+    // type set krhe cast krne ki need nai pdegi
+    // 
+    // it accept all other data type
+    // drawback
+    // generalisinng the data
+    ArrayList<Integer> arr = new ArrayList<>();
+
+   
     // genericss IMPORTANT🧨
 
     // MAP(interface) is not a child interface of collection , it contains key value pair
