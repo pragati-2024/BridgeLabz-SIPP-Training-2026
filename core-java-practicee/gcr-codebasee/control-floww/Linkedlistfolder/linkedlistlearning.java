@@ -16,7 +16,7 @@ public class linkedlistlearning<T> {
     public void display() {
         Node<T> temp = head;
         while (temp != null) {
-            System.out.print(temp.data+" => ");
+            System.out.print(temp.data + " => ");
             temp = temp.next;
         }
     }
@@ -32,22 +32,32 @@ public class linkedlistlearning<T> {
     }
 
     public T removeFirst() {
+        if (head == null) {
+            throw new UnsupportedOperationException("NO ELEMENT IN LINKEDLIST");
+        }
+
         T data = head.data;
         head = head.next;
+
+        if (head == null) {
+            tail = null;
+        }
+
         return data;
     }
 
     public T removeLast() {
-        T data = tail.data;
-        Node<T> temp = head;
         if (head == null) {
             throw new UnsupportedOperationException("NO ELEMENT IN LINKEDLIST");
-            // System.out.println("NO ELEMENT IN LINKEDLIST");
-            // return null;
-        } else if (head == tail) {
+        }
+
+        T data = tail.data;
+
+        if (head == tail) {
             head = null;
             tail = null;
         } else {
+            Node<T> temp = head;
             while (temp.next != tail) {
                 temp = temp.next;
             }
@@ -56,6 +66,28 @@ public class linkedlistlearning<T> {
         }
 
         return data;
+    }
+
+    public Node<T> search(T data) {
+        Node<T> temp = head;
+        while (temp != null) {
+            if (temp.data.equals(data)) {
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return null;
+    }
+
+    public boolean insert(T data, T searchData) {
+        Node<T> searchedNode = search(searchData);
+        if (searchedNode == null) {
+            throw new UnsupportedOperationException("ELEMENT NOT FOUND");
+        }
+        Node<T> newNode = new Node<>(data);
+        newNode.next = searchedNode.next;
+        searchedNode.next = newNode;
+        return true;
     }
     // class levvel generic use hoga
 

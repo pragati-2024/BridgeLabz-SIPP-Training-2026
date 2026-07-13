@@ -11,6 +11,11 @@ class Main {
         System.out.println("element removed from first: "+ rem1);
         int rem2 = list.removeLast();
         System.out.println("element removed from last: " + rem2);
+
+        Node<Integer> searched = list.search(40);
+        System.out.println("SEARCHED:- "+searched.data);
+        boolean isInserted = list.insert(70,10);
+        System.out.println("inserted:- "+isInserted);
         // list.addFirst(90);
         // list.removeLast();
         list.display();
