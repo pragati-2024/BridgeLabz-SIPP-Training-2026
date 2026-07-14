@@ -8,7 +8,7 @@ public class linkedlistlearning<T> {
         if (head == null) {
             head = tail = newNode;
         } else {
-            newNode.next = head;
+            newNode.setNext(head);
             head = newNode;
         }
     }
@@ -16,9 +16,10 @@ public class linkedlistlearning<T> {
     public void display() {
         Node<T> temp = head;
         while (temp != null) {
-            System.out.print(temp.data + " => ");
-            temp = temp.next;
+            System.out.print(temp.getData() + " => ");
+            temp = temp.getNext();
         }
+        System.out.println("null");
     }
 
     public void addLast(T data) {
@@ -27,7 +28,7 @@ public class linkedlistlearning<T> {
             head = tail = newNode;
             return;
         }
-        tail.next = newNode;
+        tail.setNext(newNode);
         tail = newNode;
     }
 
@@ -36,8 +37,8 @@ public class linkedlistlearning<T> {
             throw new UnsupportedOperationException("NO ELEMENT IN LINKEDLIST");
         }
 
-        T data = head.data;
-        head = head.next;
+        T data = head.getData();
+        head = head.getNext();
 
         if (head == null) {
             tail = null;
@@ -51,17 +52,17 @@ public class linkedlistlearning<T> {
             throw new UnsupportedOperationException("NO ELEMENT IN LINKEDLIST");
         }
 
-        T data = tail.data;
+        T data = tail.getData();
 
         if (head == tail) {
             head = null;
             tail = null;
         } else {
             Node<T> temp = head;
-            while (temp.next != tail) {
-                temp = temp.next;
+            while (temp.getNext() != tail) {
+                temp = temp.getNext();
             }
-            temp.next = null;
+            temp.setNext(null);
             tail = temp;
         }
 
@@ -71,10 +72,10 @@ public class linkedlistlearning<T> {
     public Node<T> search(T data) {
         Node<T> temp = head;
         while (temp != null) {
-            if (temp.data.equals(data)) {
+            if (temp.getData().equals(data)) {
                 return temp;
             }
-            temp = temp.next;
+            temp = temp.getNext();
         }
         return null;
     }
@@ -85,8 +86,8 @@ public class linkedlistlearning<T> {
             throw new UnsupportedOperationException("ELEMENT NOT FOUND");
         }
         Node<T> newNode = new Node<>(data);
-        newNode.next = searchedNode.next;
-        searchedNode.next = newNode;
+        newNode.setNext(searchedNode.getNext());
+        searchedNode.setNext(newNode);
         return true;
     }
     // class levvel generic use hoga

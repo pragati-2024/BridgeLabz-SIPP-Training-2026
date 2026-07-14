@@ -13,7 +13,7 @@ class Main {
         System.out.println("element removed from last: " + rem2);
 
         Node<Integer> searched = list.search(40);
-        System.out.println("SEARCHED:- "+searched.data);
+        System.out.println(searched != null ? "SEARCHED:- " + searched.getData() : "SEARCHED:- not found");
         boolean isInserted = list.insert(70,10);
         System.out.println("inserted:- "+isInserted);
         // list.addFirst(90);
