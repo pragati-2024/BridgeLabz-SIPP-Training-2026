@@ -3,7 +3,7 @@ public class Node<T> {
     private T data;
     private Node<T> next;
 
-    Node(T data) {
+    public Node(T data) {
         this.data = data;
     }
 
